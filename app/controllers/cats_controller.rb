@@ -17,6 +17,7 @@ class CatsController < ApplicationController
     def update
         cat = Cat.find(params[:id])
         cat.update(cat_params)
+        render json: cat
     end
     def create
         cat = Cat.create(cat_params)
